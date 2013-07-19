@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>My First Bitstarter</title>
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
@@ -12,6 +12,25 @@
       @media (min-width: 980px) {
         body {
           padding-top: 60px;
+        }
+        .linediv-l {
+          border-right: 1px white solid;
+        }
+        .linediv-r {
+          border-left: 1px white solid;
+        }
+      }
+
+      /* Landscape phones and down */
+      @media (max-width: 480px) {
+        .copy {
+          padding: 2.5% 10%;
+        }
+        .linediv-l {
+          border-bottom: 1px white solid;
+        }
+        .linediv-r {
+          border-top: 1px white solid;
         }
       }
 
@@ -35,7 +54,7 @@
         line-height: 24px;
       }
 
-      /* video pitch and Action */
+      /* Video pitch and Action */
       .pitch {
         padding: 2.5% 0%;
       }
@@ -47,18 +66,10 @@
         padding: 3% 0%;
       }
       .video, .thermometer, .order, .social, .statistics {
-        text-align center;
+        text-align: center;
       }
       .statistics h3, .statistics p {
         color: white;
-      }
-
-
-      .navigation, .section1, .section2, .faq, .footer {
-        padding: 10px 0px 10px 0px;
-      }
-      div.row {
-        border: 1px solid;
       }
     </style>
   </head>
@@ -109,6 +120,33 @@
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
           <img class="img-polaroid" src="http://placehold.it/480x300">
+        </div>
+
+        <!-- We define a new 'actions' div to contain statistics, rder, and share buttons. -->
+        <div class="span5 actions">
+          <div class="span8 offset2">
+            <div class="statistics">
+              <div class="span4">
+                <!-- linediv-l and linediv-r give dividing lines that look
+                different in horizontal and vertical layouts, illustrating
+                media queries. -->
+                <div class="linediv-l">
+                  <h3>1000</h3> <p>backers</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-c">
+                  <h3>$6000</h3> <p>of $10,000</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-r">
+                  <h3>10</h3> <p>days left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
